@@ -1,5 +1,5 @@
 import { Carousel } from 'react-bootstrap'
-import type { CarouselImage } from '../types'
+import type { CarouselImage } from '../../types'
 
 interface ImageCarouselProps {
     images: CarouselImage[];
