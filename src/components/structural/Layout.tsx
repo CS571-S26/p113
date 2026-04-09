@@ -21,6 +21,7 @@ function Layout() {
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="climbs">Climbs</Nav.Link>
                         <Nav.Link as={Link} to="schedule">Schedule</Nav.Link>
+                        <Nav.Link as={Link} to="team">Team</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

@@ -1,18 +1,21 @@
 import { HashRouter, Route, Routes } from 'react-router';
 
-import Climbs from "../content/Climbs";
-import Layout from "./Layout";
 import Home from '../content/Home';
+import Climbs from "../content/Climbs";
+import Schedule from '../content/Schedule';
+import Team from '../content/Team';
+import Layout from "./Layout";
 
 function App() {
     return (
         <HashRouter>
             <Routes>
-                <Route path="/" element={<Layout/>}>
-                <Route index element={<Home/>} />
-                <Route path="/climbs" element={<Climbs/>}></Route>
-                <Route path="/schedule" element={<Climbs />}></Route>
-                <Route path="*" element={<Climbs />} />
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="/climbs" element={<Climbs />} />
+                    <Route path="/schedule" element={<Schedule />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="*" element={<Home />} />
                 </Route>
             </Routes>
         </HashRouter>
