@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Nav } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import PageBanner from "../generic/PageBanner";
 import EventCard from "../generic/EventCard";
 import type { ClubEvent } from "../../types";
+import "./Schedule.css";
 
 const events: ClubEvent[] = [
     {
@@ -35,7 +37,7 @@ export default function Schedule() {
         const stored = sessionStorage.getItem("signedUpIds");
         return stored ? JSON.parse(stored) : [];
     });
-    const [tab, setTab] = useState("all");
+    const [tab, setTab] = useState<"all" | "mine">("all");
 
     function handleToggle(id: number) {
         const updated = signedUpIds.includes(id)
@@ -51,24 +53,42 @@ export default function Schedule() {
 
     return (
         <div>
-            <h2 className="mb-3">Upcoming Events</h2>
-            <Nav variant="tabs" className="mb-4" activeKey={tab} onSelect={k => setTab(k ?? "all")}>
-                <Nav.Item><Nav.Link eventKey="all">All Events</Nav.Link></Nav.Item>
-                <Nav.Item><Nav.Link eventKey="mine">My Events</Nav.Link></Nav.Item>
-            </Nav>
-            {displayed.length === 0
-                ? <p className="text-muted">No events here yet.</p>
-                : <div className="d-flex flex-wrap gap-3">
-                    {displayed.map(event => (
-                        <EventCard
-                            key={event.id}
-                            event={event}
-                            signedUp={signedUpIds.includes(event.id)}
-                            onToggle={handleToggle}
-                        />
-                    ))}
+            <PageBanner title="Upcoming Events" subtitle="Weekly meetups, outdoor trips, and competitions." />
+            <Container className="py-4">
+                <div className="schedule-tabs mb-4">
+                    <button
+                        className={`schedule-tab${tab === "all" ? " schedule-tab--active" : ""}`}
+                        onClick={() => setTab("all")}
+                    >
+                        All Events
+                    </button>
+                    <button
+                        className={`schedule-tab${tab === "mine" ? " schedule-tab--active" : ""}`}
+                        onClick={() => setTab("mine")}
+                    >
+                        My Events
+                        {signedUpIds.length > 0 && (
+                            <span className="schedule-tab-badge">{signedUpIds.length}</span>
+                        )}
+                    </button>
                 </div>
-            }
+
+                {displayed.length === 0 ? (
+                    <p className="text-muted">No events here yet.</p>
+                ) : (
+                    <Row className="g-4">
+                        {displayed.map(event => (
+                            <Col key={event.id} sm={6} lg={4}>
+                                <EventCard
+                                    event={event}
+                                    signedUp={signedUpIds.includes(event.id)}
+                                    onToggle={handleToggle}
+                                />
+                            </Col>
+                        ))}
+                    </Row>
+                )}
+            </Container>
         </div>
     );
 }

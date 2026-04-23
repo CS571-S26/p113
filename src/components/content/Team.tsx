@@ -1,3 +1,5 @@
+import { Col, Container, Row } from "react-bootstrap";
+import PageBanner from "../generic/PageBanner";
 import TeamMember from "../generic/TeamMember";
 import type { Member } from "../../types";
 
@@ -12,10 +14,16 @@ const members: Member[] = [
 export default function Team() {
     return (
         <div>
-            <h2 className="mb-4">Meet the Team</h2>
-            <div className="d-flex flex-wrap gap-3">
-                {members.map(member => <TeamMember key={member.name} member={member} />)}
-            </div>
+            <PageBanner title="Meet the Team" subtitle="The people who make the club run." />
+            <Container className="py-4">
+                <Row className="g-4">
+                    {members.map(member => (
+                        <Col key={member.name} sm={6} lg={4}>
+                            <TeamMember member={member} />
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
         </div>
     );
 }

@@ -1,0 +1,57 @@
+.climb-card {
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.climb-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.climb-card-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.climb-card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+.beta-toggle {
+    background: none;
+    border: 1.5px solid #2d9e6b;
+    color: #2d9e6b;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.beta-toggle:hover {
+    background-color: #2d9e6b;
+    color: #fff;
+}
+
+.beta-text {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    font-size: 0.9rem;
+    color: #374151;
+    line-height: 1.55;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+.beta-text--visible {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 12px;
+}

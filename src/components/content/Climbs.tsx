@@ -1,4 +1,6 @@
+import { Col, Container, Row } from "react-bootstrap";
 import routeSetting from "../../assets/Route-Setting.png";
+import PageBanner from "../generic/PageBanner";
 import ClimbCard from "../generic/ClimbCard";
 import type { Climb } from "../../types";
 
@@ -26,10 +28,16 @@ const climbs: Climb[] = [
 export default function Climbs() {
     return (
         <div>
-            <h2 className="mb-4">Current Projects</h2>
-            <div className="d-flex flex-wrap gap-3">
-                {climbs.map(climb => <ClimbCard key={climb.id} climb={climb} />)}
-            </div>
+            <PageBanner title="Current Projects" subtitle="Routes and boulders we're working on right now." />
+            <Container className="py-4">
+                <Row className="g-4">
+                    {climbs.map(climb => (
+                        <Col key={climb.id} sm={6} lg={4}>
+                            <ClimbCard climb={climb} />
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
         </div>
     );
 }

@@ -1,0 +1,44 @@
+.nav-pill {
+    position: relative;
+    color: rgba(255, 255, 255, 0.75) !important;
+    padding: 6px 14px !important;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    text-decoration: none !important;
+}
+
+.nav-pill:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.nav-pill.active {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.nav-pill-signup {
+    color: #fff !important;
+    background-color: #2d9e6b;
+    padding: 6px 16px !important;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none !important;
+}
+
+.nav-pill-signup:hover {
+    background-color: #27895d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 158, 107, 0.4);
+    color: #fff !important;
+}
+
+.nav-pill-signup.active {
+    background-color: #1f6e4a;
+    color: #fff !important;
+}
