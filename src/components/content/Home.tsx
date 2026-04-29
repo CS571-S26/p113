@@ -67,6 +67,9 @@ export default function Home() {
                         A student-run club dedicated to rock climbing in all its forms —
                         bouldering, sport, and trad. All skill levels welcome.
                     </p>
+                    <Link to="/signup" className="hero-cta">
+                        Join the Club
+                    </Link>
                 </Container>
             </div>
 

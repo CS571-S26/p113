@@ -20,6 +20,25 @@
     line-height: 1.6;
 }
 
+.hero-cta {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background: #1f7a52;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta:hover {
+    background: #186040;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
 .quick-card {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
