@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, Outlet, useLocation } from "react-router";
 import Logo from "../../../public/Logo.png";
+import Footer from "./Footer";
 import "./Layout.css";
 
 const NAV_LINKS = [
@@ -18,7 +19,7 @@ function Layout() {
     }
 
     return (
-        <div>
+        <div className="layout-root">
             <Navbar bg="dark" variant="dark">
                 <Container fluid className="px-3">
                     <Navbar.Brand as={Link} to="/" className="me-4">
@@ -52,7 +53,10 @@ function Layout() {
                     </Nav>
                 </Container>
             </Navbar>
-            <Outlet />
+            <main className="layout-main">
+                <Outlet />
+            </main>
+            <Footer />
         </div>
     );
 }

@@ -1,5 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
-import routeSetting from "../../assets/Route-Setting.png";
+import route1 from "../../assets/routes/route1.png";
+import route2 from "../../assets/routes/route2.png";
+import route3 from "../../assets/routes/route3.png";
 import PageBanner from "../generic/PageBanner";
 import ClimbCard from "../generic/ClimbCard";
 import type { Climb } from "../../types";
@@ -8,19 +10,19 @@ const climbs: Climb[] = [
     {
         id: 1,
         name: "The Crimson Overhang",
-        src: routeSetting,
+        src: route1,
         beta: "Start on the left side rail, flag your right foot early on the overhang, and lock off the top crimp before throwing to the sloper.",
     },
     {
         id: 2,
         name: "Slab Master",
-        src: routeSetting,
+        src: route2,
         beta: "Trust your feet — keep your hips close to the wall and use the tiny smears. Don't rush the top out.",
     },
     {
         id: 3,
         name: "Roof Crack",
-        src: routeSetting,
+        src: route3,
         beta: "Jam your hand in thumb-down for the undercling sequence. Heel hook on the lip before committing to the mantle.",
     },
 ];

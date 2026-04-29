@@ -23,7 +23,7 @@ export default function EventCard({ event, signedUp, onToggle }: EventCardProps)
                     <span className="event-card-date">📅 {formatDate(event.date)}</span>
                     <span className="event-card-location">📍 {event.location}</span>
                 </div>
-                <Card.Title className="event-card-title">{event.name}</Card.Title>
+                <Card.Title as="h2" className="event-card-title">{event.name}</Card.Title>
                 <Card.Text className="event-card-desc">{event.description}</Card.Text>
                 <button
                     className={`event-btn${signedUp ? " event-btn--cancel" : " event-btn--join"}`}

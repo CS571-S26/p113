@@ -1,0 +1,33 @@
+.faq-section {
+    margin-top: 64px;
+}
+
+.faq-section h2 {
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.faq-section .accordion-button {
+    font-weight: 600;
+    color: #1a1a2e;
+    padding: 18px 4px;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #1f7a52;
+    box-shadow: none;
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.faq-section .accordion-body {
+    color: #4b5563;
+    line-height: 1.65;
+    padding: 4px 4px 20px;
+}

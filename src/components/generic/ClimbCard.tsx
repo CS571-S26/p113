@@ -10,7 +10,7 @@ export default function ClimbCard({ climb }: { climb: Climb }) {
         <Card className="climb-card">
             <Card.Img variant="top" src={climb.src} alt={climb.name} className="climb-card-img" />
             <Card.Body>
-                <Card.Title className="climb-card-title">{climb.name}</Card.Title>
+                <Card.Title as="h2" className="climb-card-title">{climb.name}</Card.Title>
                 <button className="beta-toggle" onClick={() => setShowBeta(!showBeta)}>
                     {showBeta ? "Hide Beta ↑" : "Show Beta ↓"}
                 </button>

@@ -35,7 +35,7 @@ function Signup() {
                 <Container className="py-5" style={{ maxWidth: 600 }}>
                     <Alert variant="success" className="signup-success">
                         <div className="signup-success-icon">✓</div>
-                        <Alert.Heading>You're signed up!</Alert.Heading>
+                        <Alert.Heading as="h2">You're signed up!</Alert.Heading>
                         <p>Thanks for joining the Climbing Club. We'll see you on the wall!</p>
                     </Alert>
                 </Container>

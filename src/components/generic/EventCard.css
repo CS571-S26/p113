@@ -7,11 +7,11 @@
 .event-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
-    border-color: #2d9e6b;
+    border-color: #1f7a52;
 }
 
 .event-card--going {
-    border-color: #2d9e6b;
+    border-color: #1f7a52;
     background-color: #f0faf5;
 }
 
@@ -58,12 +58,12 @@
 }
 
 .event-btn--join {
-    background-color: #2d9e6b;
+    background-color: #1f7a52;
     color: #fff;
 }
 
 .event-btn--join:hover {
-    background-color: #27895d;
+    background-color: #175a3d;
 }
 
 .event-btn--cancel {

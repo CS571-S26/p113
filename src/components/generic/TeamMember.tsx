@@ -24,8 +24,8 @@ export default function TeamMember({ member }: { member: Member }) {
                     {initials(member.name)}
                 </div>
                 <div>
-                    <Card.Title className="team-card-name">{member.name}</Card.Title>
-                    <Card.Subtitle className="team-card-sub">
+                    <Card.Title as="h2" className="team-card-name">{member.name}</Card.Title>
+                    <Card.Subtitle as="p" className="team-card-sub">
                         {member.major} · Age {member.age}
                     </Card.Subtitle>
                     <Card.Text className="team-card-bio">{member.bio}</Card.Text>

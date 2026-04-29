@@ -7,7 +7,7 @@
 }
 
 .signup-btn {
-    background-color: #2d9e6b;
+    background-color: #1f7a52;
     color: #fff;
     border: none;
     border-radius: 24px;
@@ -19,7 +19,7 @@
 }
 
 .signup-btn:hover {
-    background-color: #27895d;
+    background-color: #175a3d;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(45, 158, 107, 0.35);
 }
@@ -33,7 +33,7 @@
 .signup-success-icon {
     width: 52px;
     height: 52px;
-    background-color: #2d9e6b;
+    background-color: #1f7a52;
     color: #fff;
     border-radius: 50%;
     display: flex;

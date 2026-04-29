@@ -24,8 +24,8 @@
 
 .beta-toggle {
     background: none;
-    border: 1.5px solid #2d9e6b;
-    color: #2d9e6b;
+    border: 1.5px solid #1f7a52;
+    color: #1f7a52;
     border-radius: 20px;
     padding: 4px 14px;
     font-size: 0.82rem;
@@ -35,7 +35,7 @@
 }
 
 .beta-toggle:hover {
-    background-color: #2d9e6b;
+    background-color: #1f7a52;
     color: #fff;
 }
 
