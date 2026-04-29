@@ -74,3 +74,26 @@
 .event-btn--cancel:hover {
     background-color: #fecaca;
 }
+
+.event-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.event-calendar-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1f7a52;
+    text-decoration: none;
+    border-bottom: 1.5px dashed #1f7a52;
+    padding-bottom: 1px;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.event-calendar-link:hover,
+.event-calendar-link:focus-visible {
+    color: #175a3d;
+    border-color: #175a3d;
+}
