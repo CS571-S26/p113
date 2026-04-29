@@ -1,12 +1,6 @@
 .team-card {
     border-radius: 12px;
     border: 1px solid #e0e0e0;
-    transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-
-.team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .team-card-body {
